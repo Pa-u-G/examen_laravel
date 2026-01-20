@@ -23,17 +23,11 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard');
+            return redirect()->intended('/admin');
         }
 
-        return back()->withErrors([
-            'email' => 'Credenciales incorrectas',
-        ]);
-    }
+        return back()->with('error', 'mail/password incorrecto');
 
-    public function showRegister()
-    {
-        return view('auth.register');
     }
 
     public function logout(Request $request)

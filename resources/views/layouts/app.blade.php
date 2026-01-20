@@ -7,14 +7,11 @@
 </head>
 <body>
     <header>
-        <h1>Mi App</h1>
+        <h1>Examen laravel</h1>
         <nav>
-            <a href="{{ route('dashboard') }}">Dashboard</a>
-            <a href="{{ route('users.index') }}">users</a>
-            <form action="{{ route('logout') }}" method="POST" style="display:inline;">
-                @csrf
-                <button type="submit">Logout</button>
-            </form>
+            <a href="{{ route('inscription.index') }}">eventos</a>
+            <a href="{{ route('admin.index') }}">zona admin</a>
+            
         </nav>
     </header>
 
