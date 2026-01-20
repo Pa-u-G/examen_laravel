@@ -71,4 +71,11 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('users.index');
     }
+
+    public function search(Request $request){
+        $users = User::where('name', 'LIKE', '%' . $request['name'] . '%')->get();
+
+        
+        return view('users.index', compact('users'));
+    }
 }

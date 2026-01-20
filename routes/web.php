@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/', function () {
         return view('dashboard');
     })->name("dashboard");
+    Route::post('/users/search', [UserController::class, 'search'])->name('users.search');
 });
     
 Route::middleware('auth')->get('/{any}', function () {

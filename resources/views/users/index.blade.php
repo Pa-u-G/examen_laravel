@@ -34,3 +34,11 @@
         @endforeach
     </tbody>
 </table>
+
+<form action="{{ route('users.search') }}" method="POST">
+    @csrf
+    @method("POST")
+    <input type="text" name="name" id="name">
+    <input type="submit">
+</form>
+@endsection

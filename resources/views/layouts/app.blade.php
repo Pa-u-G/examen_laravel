@@ -5,7 +5,7 @@
     <title>@yield('title', 'Mi App')</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-red-400" >
+<body>
     <header>
         <h1>Mi App</h1>
         <nav>
@@ -18,8 +18,8 @@
         </nav>
     </header>
 
-    <main>
+    <div>
         @yield('content')
-    </main>
+</div>
 </body>
 </html>

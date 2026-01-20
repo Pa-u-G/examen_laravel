@@ -1,3 +1,6 @@
+@extends("layouts.app")
+@section("title", "Dashboard")
+@section("content")
 <h1>Editar usuario</h1>
 
 <form action="{{ route('users.update', $user) }}" method="POST">
@@ -11,3 +14,4 @@
 
     <button type="submit">Actualizar</button>
 </form>
+@endsection
