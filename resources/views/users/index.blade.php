@@ -1,3 +1,7 @@
+@extends("layouts.app")
+@section("title", "Dashboard")
+@section("content")
+
 <h1>Usuarios</h1>
 
 <a href="{{ route('users.create') }}">Crear usuario</a>
